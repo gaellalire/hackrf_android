@@ -848,7 +848,7 @@ public class Hackrf implements Runnable{
 	 * 
 	 * @param	ifFrequency		Intermediate Frequency in Hz. Must be in [2150000000; 2750000000]
 	 * @param	loFrequency		Local Oscillator Frequency in Hz. Must be in [84375000; 5400000000]
-	 * @param	path			RF_PATH_FILTER_BYPASS, *_HIGH_PASS or *_LOW_PASS
+	 * @param	rfPath			RF_PATH_FILTER_BYPASS, *_HIGH_PASS or *_LOW_PASS
 	 * @return 	true on success
 	 * @throws 	HackrfUsbException
 	 */
