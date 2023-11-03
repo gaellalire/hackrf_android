@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "25.0.2"
+    compileSdk 34
+    buildToolsVersion '34.0.0'
 
     defaultConfig {
         applicationId "com.mantz_it.hackrf_test"
-        minSdkVersion 14
-        targetSdkVersion 25
+        minSdkVersion 32
+        targetSdkVersion 34
     }
 
     buildTypes {
@@ -16,9 +16,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    namespace "com.mantz_it.hackrf_test"
 }
 
 dependencies {
-    compile project(':hackrf_android')
-    compile 'com.android.support:appcompat-v7:23.3.0'
+    implementation project(':hackrf_android')
+    implementation 'com.android.support:appcompat-v7:23.3.0'
 }
